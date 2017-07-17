@@ -1,0 +1,7 @@
+<iscache type = "relative" hour = "24"/>
+1.  <a href="${URLUtils.url('Demo-Hello')}">Hello</a><br><br>
+2.  <a href="${URLUtils.url('Demo-HelloWorld')}">Hello World</a><br><br>
+3.  <a href="${URLUtils.url('Demo-ShowParam')}">HTTP Parameter (none)</a><br><br>
+4.  <a href="${URLUtils.url('Demo-ShowParam')}?foo=bar">HTTP Parameter (foo)</a><br><br>
+5.  <a href="${URLUtils.url('Demo-ShowProduct')}?pid=123456">Product (123456)</a><br><br>
+6.  <a href="${URLUtils.url('Demo-ShowProductDecorated')}?pid=123456">Product  - decorated (123456)</a><br><br>

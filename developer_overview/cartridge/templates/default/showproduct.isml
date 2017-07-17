@@ -1,0 +1,3 @@
+<isprint value="${pdict.product.name}"/><br>
+<isprint value="${pdict.product.shortDescription}"/><br>
+<isprint value="${pdict.product.priceModel.price}"/>

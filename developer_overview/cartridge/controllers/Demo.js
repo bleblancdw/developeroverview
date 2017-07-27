@@ -65,6 +65,22 @@ server.get('ShowProductDecorated', cache.applyDefaultCache, function(req,res,nex
 		}
 });
 
+server.get('LinksBasic', cache.applyDefaultCache, function (req, res, next) {
+	
+	var urlAction1 = new URLAction('Demo-Links', 'MobileFirstSG', 'en_US');
+	var url1 = URLUtils.abs(false, urlAction1);
+
+	var urlAction2 = new URLAction('Demo-Links', 'MobileFirstSGGlobal', 'fr_FR');
+	var url2 = URLUtils.abs(false, urlAction2);
+	
+	var urlAction3 = new URLAction('Demo-Links', 'MobileFirstSGGlobal', 'en_GB');
+	var url3 = URLUtils.abs(false, urlAction3);
+	
+	res.render('/linksBasic',{url1 : url1, url2: url2, url3: url3});
+
+	next();
+});
+
 server.get('Links', cache.applyDefaultCache, function (req, res, next) {
 	
 	var urlAction1 = new URLAction('Demo-Links', 'MobileFirstSG', 'en_US');
@@ -80,8 +96,8 @@ server.get('Links', cache.applyDefaultCache, function (req, res, next) {
 	next();
 });
 
-server.get('Links2', cache.applyDefaultCache, function (req, res, next) {
-		
+server.get('Links2', cache.applyDefaultCache, function (req, res, next){
+	
 	res.render('/linkspages');
 	next();
 });

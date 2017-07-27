@@ -1,0 +1,15 @@
+<iscache type = "relative" hour = "1" minute = "30"/>
+<h1>Demo Links:</h1>
+<isif condition ="${pdict.CurrentRequest.locale !== 'en_US'}"><a href="${pdict.url1}">United States</a><br><br></isif>
+<isif condition ="${pdict.CurrentRequest.locale === 'en_US'}">United States<br><br></isif>
+<isif condition ="${pdict.CurrentRequest.locale !== 'fr_FR'}"><a href="${pdict.url2}">France</a><br><br></isif>
+<isif condition ="${pdict.CurrentRequest.locale === 'fr_FR'}">France</a><br><br></isif>
+<isif condition ="${pdict.CurrentRequest.locale !== 'en_GB'}"><a href="${pdict.url3}">United Kingdom</a><br><br></isif>
+<isif condition ="${pdict.CurrentRequest.locale === 'en_GB'}">United Kingdom</a><br><br></isif>
+<br><br>
+1.  <a href="${URLUtils.url('Demo-Hello')}">Hello</a><br><br>
+2.  <a href="${URLUtils.url('Demo-HelloWorld')}">Hello World</a><br><br>
+3.  <a href="${URLUtils.url('Demo-ShowParam')}">HTTP Parameter (none)</a><br><br>
+4.  <a href="${URLUtils.url('Demo-ShowParam')}?foo=bar">HTTP Parameter (foo)</a><br><br>
+5.  <a href="${URLUtils.url('Demo-ShowProduct')}?pid=123456">Product (123456)</a><br><br>
+6.  <a href="${URLUtils.url('Demo-ShowProductDecorated')}?pid=123456">Product  - decorated (123456)</a><br><br>

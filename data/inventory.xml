@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inventory xmlns="http://www.demandware.com/xml/impex/inventory/2007-05-31">
+    <inventory-list>
+        <header list-id="inventory">
+            <default-instock>false</default-instock>
+            <description>Product Sku inventory</description>
+            <use-bundle-inventory-only>false</use-bundle-inventory-only>
+            <on-order>false</on-order>
+        </header>
+
+        <records>
+
+        <record product-id="nikon-p6000">
+                <allocation>0</allocation>
+                <allocation-timestamp>2019-07-10T20:39:40.000Z</allocation-timestamp>
+                <perpetual>false</perpetual>
+                <preorder-backorder-handling>preorder</preorder-backorder-handling>
+                <preorder-backorder-allocation>10</preorder-backorder-allocation>
+                <in-stock-date>2009-06-01Z</in-stock-date>
+                <in-stock-datetime>2009-06-01T00:00:00.000Z</in-stock-datetime>
+                <ats>10</ats>
+                <on-order>0</on-order>
+                <turnover>0</turnover>
+            </record>
+
+            <record product-id="nikon-sl16">
+                <allocation>0</allocation>
+                <allocation-timestamp>2019-07-10T20:39:40.000Z</allocation-timestamp>
+                <perpetual>false</perpetual>
+                <preorder-backorder-handling>preorder</preorder-backorder-handling>
+                <preorder-backorder-allocation>10</preorder-backorder-allocation>
+                <in-stock-date>2009-06-01Z</in-stock-date>
+                <in-stock-datetime>2009-06-01T00:00:00.000Z</in-stock-datetime>
+                <ats>10</ats>
+                <on-order>0</on-order>
+                <turnover>0</turnover>
+            </record>
+
+            <record product-id="nikon-s60">
+                <allocation>0</allocation>
+                <allocation-timestamp>2019-07-10T20:39:39.000Z</allocation-timestamp>
+                <perpetual>false</perpetual>
+                <preorder-backorder-handling>preorder</preorder-backorder-handling>
+                <preorder-backorder-allocation>10</preorder-backorder-allocation>
+                <in-stock-date>2009-06-01Z</in-stock-date>
+                <in-stock-datetime>2009-06-01T00:00:00.000Z</in-stock-datetime>
+                <ats>10</ats>
+                <on-order>0</on-order>
+                <turnover>0</turnover>
+            </record>
+
+        </records>
+    </inventory-list>
+</inventory>

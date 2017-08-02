@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pricebooks xmlns="http://www.demandware.com/xml/impex/pricebook/2006-10-31">
+    <pricebook>
+        <header pricebook-id="usd-sale-prices">
+            <currency>USD</currency>
+            <display-name xml:lang="x-default">Sale Prices</display-name>
+            <online-flag>true</online-flag>
+            <parent>usd-list-prices</parent>
+        </header>
+
+        <price-tables>
+
+		<price-table product-id="nikon-p6000">
+                <amount quantity="1">399.99</amount>
+        </price-table>
+
+        <price-table product-id="nikon-s60">
+                <amount quantity="1">199.99</amount>
+        </price-table>
+
+        <price-table product-id="nikon-sl16">
+                <amount quantity="1">119.99</amount>
+        </price-table>
+
+        </price-tables>
+    </pricebook>
+</pricebooks>

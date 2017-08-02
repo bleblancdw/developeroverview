@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="http://www.demandware.com/xml/impex/catalog/2006-10-31" catalog-id="electronics-catalog">
+    <header>
+        <image-settings>
+            <internal-location base-path="/images"/>
+            <view-types>
+                <view-type>large</view-type>
+                <view-type>medium</view-type>
+                <view-type>small</view-type>
+                <view-type>swatch</view-type>
+                <view-type>hi-res</view-type>
+            </view-types>
+            <variation-attribute-id>color</variation-attribute-id>
+            <alt-pattern>${productname}, ${variationvalue}, ${viewtype}</alt-pattern>
+            <title-pattern>${productname}, ${variationvalue}</title-pattern>
+        </image-settings>
+    </header>
+
+    <product product-id="nikon-p6000">
+        <ean/>
+        <upc/>
+        <unit/>
+        <min-order-quantity>1</min-order-quantity>
+        <step-quantity>1</step-quantity>
+        <display-name xml:lang="x-default">Nikon Coolpix P6000 Digital Point and Shoot Camera</display-name>
+        <short-description xml:lang="x-default">Nikon's classically compact Coolpix P6000 combines 13.5 effective megapixels with a 4x wide-angle optical Zoom-NIKKOR ED glass lens for stunning prints as large as 20x30 inches. Nikon's EXPEED image processor and Image stabilization make for sharp pictures. The incredible, bright 2.7-inch LCD and optical viewfinder make it easy to compose and share pictures. Get the ultimate in control and creativity with Program, Shutter, Aperture and full Manual exposure modes. The Coolpix 6000 has a Wired LAN port and GPS geo-tagging capability to upload your pictures to Nikon's my Picturetown photo storage and sharing service. </short-description>
+        <store-force-price-flag>false</store-force-price-flag>
+        <store-non-inventory-flag>false</store-non-inventory-flag>
+        <store-non-revenue-flag>false</store-non-revenue-flag>
+        <store-non-discountable-flag>false</store-non-discountable-flag>
+        <online-flag>true</online-flag>
+        <available-flag>true</available-flag>
+        <searchable-flag>true</searchable-flag>
+        <images>
+            <image-group view-type="large">
+                <image path="large/nikon-p6000.jpg"/>
+            </image-group>
+            <image-group view-type="medium">
+                <image path="medium/nikon-p6000.jpg"/>
+            </image-group>
+            <image-group view-type="small">
+                <image path="small/nikon-p6000.jpg"/>
+            </image-group>
+        </images>
+        <tax-class-id>standard</tax-class-id>
+        <brand>Nikon</brand>
+        <page-attributes>
+            <page-title xml:lang="x-default">Nikon Coolpix P6000 Digital Point and Shoot Camera</page-title>
+            <page-description xml:lang="x-default">Nikon's classically compact Coolpix P6000 combines 13.5 effective megapixels with a 4x wide-angle optical Zoom-NIKKOR ED glass lens for stunning prints as large as 20x30 inches. Nikon's EXPEED image processor and Image stabilization make for sharp pictures. The incredible, bright 2.7-inch LCD and optical viewfinder make it easy to compose and share pictures. Get the ultimate in control and creativity with Program, Shutter, Aperture and full Manual exposure modes. The Coolpix 6000 has a Wired LAN port and GPS geo-tagging capability to upload your pictures to Nikon's my Picturetown photo storage and sharing service.</page-description>
+            <page-keywords xml:lang="x-default">Nikon</page-keywords>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="batteryLife">Up to 250 pictures</custom-attribute>
+            <custom-attribute attribute-id="batteryType">Lithium Ion</custom-attribute>
+            <custom-attribute attribute-id="digitalCameraFeatures">
+                <value>0120</value>
+                <value>0130</value>
+                <value>0140</value>
+                <value>0150</value>
+                <value>0160</value>
+            </custom-attribute>
+            <custom-attribute attribute-id="digitalCameraPixels">13.5 megapixels</custom-attribute>
+            <custom-attribute attribute-id="digitalCameraType">Point and Shoot</custom-attribute>
+            <custom-attribute attribute-id="dimDepth">1.7 inches</custom-attribute>
+            <custom-attribute attribute-id="dimHeight">2.6 inches</custom-attribute>
+            <custom-attribute attribute-id="dimWidth">4.2 inches</custom-attribute>
+            <custom-attribute attribute-id="displaySize">2.7 inches</custom-attribute>
+            <custom-attribute attribute-id="memoryType">
+                <value>0010</value>
+            </custom-attribute>
+            <custom-attribute attribute-id="tabDescription">Nikon's classically compact Coolpix P6000 combines 13.5 effective megapixels with a 4x wide-angle optical Zoom-NIKKOR ED glass lens for stunning prints as large as 20x30 inches. Nikon's EXPEED image processor and Image stabilization make for sharp pictures. The incredible, bright 2.7-inch LCD and optical viewfinder make it easy to compose and share pictures. Get the ultimate in control and creativity with Program, Shutter, Aperture and full Manual exposure modes. The Coolpix 6000 has a Wired LAN port and GPS geo-tagging capability to upload your pictures to Nikon's my Picturetown photo storage and sharing service.</custom-attribute>
+        </custom-attributes>
+        <options>
+            <shared-option option-id="digitalCameraWarranty"/>
+        </options>
+        <classification-category>electronics-digital-cameras</classification-category>
+        <pinterest-enabled-flag>false</pinterest-enabled-flag>
+        <facebook-enabled-flag>false</facebook-enabled-flag>
+        <store-attributes>
+            <force-price-flag>false</force-price-flag>
+            <non-inventory-flag>false</non-inventory-flag>
+            <non-revenue-flag>false</non-revenue-flag>
+            <non-discountable-flag>false</non-discountable-flag>
+        </store-attributes>
+    </product>
+
+    <product product-id="nikon-sl16">
+        <ean/>
+        <upc/>
+        <unit/>
+        <min-order-quantity>1</min-order-quantity>
+        <step-quantity>1</step-quantity>
+        <display-name xml:lang="x-default">Nikon Coolpix L16 Digital Point and Shoot Camera</display-name>
+        <short-description xml:lang="x-default">The Nikon Coolpix L16 makes photography so easy, it’s enjoyable. Provided with a 7.1 megapixels resolution to keep images sharp, it paves way for carefree shooting with a wealth of automatic functions for stunning results. Accompanied with the precision of a 3x Zoom-NIKKOR lens, it enables consistently sharp images whether you shoot up close or take in an entire scene. A 2.8-inch high resolution LCD simplifies composition and playback, and empowered with an ISO up to 1600, the light sensitivity reduces the risk of blurred images with fast-moving subjects or in low light.</short-description>
+        <store-force-price-flag>false</store-force-price-flag>
+        <store-non-inventory-flag>false</store-non-inventory-flag>
+        <store-non-revenue-flag>false</store-non-revenue-flag>
+        <store-non-discountable-flag>false</store-non-discountable-flag>
+        <online-flag>true</online-flag>
+        <available-flag>true</available-flag>
+        <searchable-flag>true</searchable-flag>
+        <images>
+            <image-group view-type="large">
+                <image path="large/nikon-sl16.jpg"/>
+            </image-group>
+            <image-group view-type="medium">
+                <image path="medium/nikon-sl16.jpg"/>
+            </image-group>
+            <image-group view-type="small">
+                <image path="small/nikon-sl16.jpg"/>
+            </image-group>
+        </images>
+        <tax-class-id>standard</tax-class-id>
+        <brand>Nikon</brand>
+        <page-attributes>
+            <page-title xml:lang="x-default">Nikon Coolpix L16 Digital Point and Shoot Camera</page-title>
+            <page-description xml:lang="x-default">The Nikon Coolpix L16 makes photography so easy, it’s enjoyable. Provided with a 7.1 megapixels resolution to keep images sharp, it paves way for carefree shooting with a wealth of automatic functions for stunning results. Accompanied with the precision of a 3x Zoom-NIKKOR lens, it enables consistently sharp images whether you shoot up close or take in an entire scene. A 2.8-inch high resolution LCD simplifies composition and playback, and empowered with an ISO up to 1600, the light sensitivity reduces the risk of blurred images with fast-moving subjects or in low light.</page-description>
+            <page-keywords xml:lang="x-default">Nikon</page-keywords>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="batteryLife">Up to 180 pictures</custom-attribute>
+            <custom-attribute attribute-id="batteryType">Alkaline (AA)</custom-attribute>
+            <custom-attribute attribute-id="digitalCameraFeatures">
+                <value>0010</value>
+                <value>0110</value>
+                <value>0190</value>
+            </custom-attribute>
+            <custom-attribute attribute-id="digitalCameraPixels">7.1 megapixels</custom-attribute>
+            <custom-attribute attribute-id="digitalCameraType">Point and Shoot</custom-attribute>
+            <custom-attribute attribute-id="dimDepth">1.2 inches</custom-attribute>
+            <custom-attribute attribute-id="dimHeight">2.4 inches</custom-attribute>
+            <custom-attribute attribute-id="dimWidth">3.7 inches</custom-attribute>
+            <custom-attribute attribute-id="displaySize">2.8 inches</custom-attribute>
+            <custom-attribute attribute-id="memoryType">
+                <value>0010</value>
+            </custom-attribute>
+            <custom-attribute attribute-id="tabDescription">The Nikon Coolpix L16 makes photography so easy, it’s enjoyable. Provided with a 7.1 megapixels resolution to keep images sharp, it paves way for carefree shooting with a wealth of automatic functions for stunning results. Accompanied with the precision of a 3x Zoom-NIKKOR lens, it enables consistently sharp images whether you shoot up close or take in an entire scene. A 2.8-inch high resolution LCD simplifies composition and playback, and empowered with an ISO up to 1600, the light sensitivity reduces the risk of blurred images with fast-moving subjects or in low light.</custom-attribute>
+        </custom-attributes>
+        <options>
+            <shared-option option-id="digitalCameraWarranty"/>
+        </options>
+        <classification-category>electronics-digital-cameras</classification-category>
+        <pinterest-enabled-flag>false</pinterest-enabled-flag>
+        <facebook-enabled-flag>false</facebook-enabled-flag>
+        <store-attributes>
+            <force-price-flag>false</force-price-flag>
+            <non-inventory-flag>false</non-inventory-flag>
+            <non-revenue-flag>false</non-revenue-flag>
+            <non-discountable-flag>false</non-discountable-flag>
+        </store-attributes>
+    </product>
+
+    <product product-id="nikon-s60">
+        <ean/>
+        <upc/>
+        <unit/>
+        <min-order-quantity>1</min-order-quantity>
+        <step-quantity>1</step-quantity>
+        <display-name xml:lang="x-default">Nikon Coolpix S60 Digital Point and Shoot Camera</display-name>
+        <short-description xml:lang="x-default">The Nikon Coolpix S60 represents the cutting edge of elegant design and intuitive operation. This stylish compact camera introduces an entirely new, amazingly innovative, 3.5-inch TOUCH-SCREEN LCD and a new graphic user interface that places shooting and playback controls at the user's fingertips.</short-description>
+        <store-force-price-flag>false</store-force-price-flag>
+        <store-non-inventory-flag>false</store-non-inventory-flag>
+        <store-non-revenue-flag>false</store-non-revenue-flag>
+        <store-non-discountable-flag>false</store-non-discountable-flag>
+        <online-flag>true</online-flag>
+        <available-flag>true</available-flag>
+        <searchable-flag>true</searchable-flag>
+        <images>
+            <image-group view-type="large">
+                <image path="large/nikon-s60.jpg"/>
+            </image-group>
+            <image-group view-type="medium">
+                <image path="medium/nikon-s60.jpg"/>
+            </image-group>
+            <image-group view-type="small">
+                <image path="small/nikon-s60.jpg"/>
+            </image-group>
+        </images>
+        <tax-class-id>standard</tax-class-id>
+        <brand>Nikon</brand>
+        <page-attributes>
+            <page-title xml:lang="x-default">Nikon Coolpix S60 Digital Point and Shoot Camera</page-title>
+            <page-description xml:lang="x-default">The Nikon Coolpix S60 represents the cutting edge of elegant design and intuitive operation. This stylish compact camera introduces an entirely new, amazingly innovative, 3.5-inch TOUCH-SCREEN LCD and a new graphic user interface that places shooting and playback controls at the user's fingertips.</page-description>
+            <page-keywords xml:lang="x-default">Nikon</page-keywords>
+        </page-attributes>
+        <custom-attributes>
+            <custom-attribute attribute-id="batteryLife">Up to 140 pictures</custom-attribute>
+            <custom-attribute attribute-id="batteryType">Lithium Ion</custom-attribute>
+            <custom-attribute attribute-id="digitalCameraFeatures">
+                <value>0010</value>
+                <value>0110</value>
+                <value>0170</value>
+                <value>0180</value>
+            </custom-attribute>
+            <custom-attribute attribute-id="digitalCameraPixels">10 megapixels</custom-attribute>
+            <custom-attribute attribute-id="digitalCameraType">Point and Shoot</custom-attribute>
+            <custom-attribute attribute-id="dimDepth">1 inch</custom-attribute>
+            <custom-attribute attribute-id="dimHeight">2.4 inches</custom-attribute>
+            <custom-attribute attribute-id="dimWidth">3.8 inches</custom-attribute>
+            <custom-attribute attribute-id="displaySize">3.5 inches</custom-attribute>
+            <custom-attribute attribute-id="memoryType">
+                <value>0010</value>
+            </custom-attribute>
+            <custom-attribute attribute-id="tabDescription">The Nikon Coolpix S60 represents the cutting edge of elegant design and intuitive operation. This stylish compact camera introduces an entirely new, amazingly innovative, 3.5-inch TOUCH-SCREEN LCD and a new graphic user interface that places shooting and playback controls at the user's fingertips.</custom-attribute>
+        </custom-attributes>
+        <options>
+            <shared-option option-id="digitalCameraWarranty"/>
+        </options>
+        <classification-category>electronics-digital-cameras</classification-category>
+        <pinterest-enabled-flag>false</pinterest-enabled-flag>
+        <facebook-enabled-flag>false</facebook-enabled-flag>
+        <store-attributes>
+            <force-price-flag>false</force-price-flag>
+            <non-inventory-flag>false</non-inventory-flag>
+            <non-revenue-flag>false</non-revenue-flag>
+            <non-discountable-flag>false</non-discountable-flag>
+        </store-attributes>
+    </product>
+
+    <product-option option-id="consoleWarranty">
+        <display-name xml:lang="x-default">Extended Warranty</display-name>
+        <sort-mode>price</sort-mode>
+        <option-values>
+            <option-value value-id="001" default="false">
+                <display-value xml:lang="x-default">1 Year Warranty</display-value>
+                <option-value-prices>
+                    <option-value-price currency="USD">9.99</option-value-price>
+                </option-value-prices>
+            </option-value>
+            <option-value value-id="003" default="false">
+                <display-value xml:lang="x-default">5 Year Warranty</display-value>
+                <option-value-prices>
+                    <option-value-price currency="USD">29.99</option-value-price>
+                </option-value-prices>
+            </option-value>
+            <option-value value-id="000" default="true">
+                <display-value xml:lang="x-default">None</display-value>
+                <option-value-prices>
+                    <option-value-price currency="USD">0.00</option-value-price>
+                </option-value-prices>
+            </option-value>
+            <option-value value-id="002" default="false">
+                <display-value xml:lang="x-default">3 Year Warranty</display-value>
+                <option-value-prices>
+                    <option-value-price currency="USD">19.99</option-value-price>
+                </option-value-prices>
+            </option-value>
+        </option-values>
+    </product-option>
+
+    <product-option option-id="digitalCameraWarranty">
+        <display-name xml:lang="x-default">Extended Warranty</display-name>
+        <sort-mode>price</sort-mode>
+        <option-values>
+            <option-value value-id="001" default="true">
+                <display-value xml:lang="x-default">2 Year Warranty</display-value>
+                <option-value-prices>
+                    <option-value-price currency="USD">0.00</option-value-price>
+                </option-value-prices>
+            </option-value>
+            <option-value value-id="002" default="false">
+                <display-value xml:lang="x-default">5 Year Warranty</display-value>
+                <option-value-prices>
+                    <option-value-price currency="USD">39.99</option-value-price>
+                </option-value-prices>
+            </option-value>
+        </option-values>
+    </product-option>
+
+    <product-option option-id="gpsWarranty">
+        <display-name xml:lang="x-default">Extended Warranty</display-name>
+        <sort-mode>price</sort-mode>
+        <option-values>
+            <option-value value-id="001" default="false">
+                <display-value xml:lang="x-default">1 Year Warranty</display-value>
+                <option-value-prices>
+                    <option-value-price currency="USD">9.99</option-value-price>
+                </option-value-prices>
+            </option-value>
+            <option-value value-id="003" default="false">
+                <display-value xml:lang="x-default">5 Year Warranty</display-value>
+                <option-value-prices>
+                    <option-value-price currency="USD">29.99</option-value-price>
+                </option-value-prices>
+            </option-value>
+            <option-value value-id="000" default="true">
+                <display-value xml:lang="x-default">None</display-value>
+                <option-value-prices>
+                    <option-value-price currency="USD">0.00</option-value-price>
+                </option-value-prices>
+            </option-value>
+            <option-value value-id="002" default="false">
+                <display-value xml:lang="x-default">3 Year Warranty</display-value>
+                <option-value-prices>
+                    <option-value-price currency="USD">19.99</option-value-price>
+                </option-value-prices>
+            </option-value>
+            <option-value value-id="004" default="false">
+                <display-value xml:lang="x-default">2 Year Warranty</display-value>
+                <option-value-prices>
+                    <option-value-price currency="USD">15.99</option-value-price>
+                </option-value-prices>
+            </option-value>
+        </option-values>
+    </product-option>
+
+    <product-option option-id="tvWarranty">
+        <display-name xml:lang="x-default">Extended Warranty</display-name>
+        <sort-mode>price</sort-mode>
+        <option-values>
+            <option-value value-id="001" default="false">
+                <display-value xml:lang="x-default">1 Year Warranty</display-value>
+                <option-value-prices>
+                    <option-value-price currency="EUR">20.00</option-value-price>
+                    <option-value-price currency="USD">49.99</option-value-price>
+                </option-value-prices>
+            </option-value>
+            <option-value value-id="003" default="false">
+                <display-value xml:lang="x-default">5 Year Warranty</display-value>
+                <option-value-prices>
+                    <option-value-price currency="EUR">60.00</option-value-price>
+                    <option-value-price currency="USD">129.99</option-value-price>
+                </option-value-prices>
+            </option-value>
+            <option-value value-id="000" default="true">
+                <display-value xml:lang="x-default">None</display-value>
+                <option-value-prices>
+                    <option-value-price currency="EUR">0.00</option-value-price>
+                    <option-value-price currency="USD">0.00</option-value-price>
+                </option-value-prices>
+            </option-value>
+            <option-value value-id="002" default="false">
+                <display-value xml:lang="x-default">3 Year Warranty</display-value>
+                <option-value-prices>
+                    <option-value-price currency="EUR">40.00</option-value-price>
+                    <option-value-price currency="USD">99.99</option-value-price>
+                </option-value-prices>
+            </option-value>
+        </option-values>
+    </product-option>
+
+    <variation-attribute attribute-id="color" variation-attribute-id="color">
+        <display-name xml:lang="x-default">Color</display-name>
+        <variation-attribute-values>
+            <variation-attribute-value value="Silver">
+                <display-value xml:lang="x-default">Silver</display-value>
+            </variation-attribute-value>
+            <variation-attribute-value value="Black">
+                <display-value xml:lang="x-default">Black</display-value>
+            </variation-attribute-value>
+            <variation-attribute-value value="Purple">
+                <display-value xml:lang="x-default">Purple</display-value>
+            </variation-attribute-value>
+            <variation-attribute-value value="Blue">
+                <display-value xml:lang="x-default">Blue</display-value>
+            </variation-attribute-value>
+            <variation-attribute-value value="Green">
+                <display-value xml:lang="x-default">Green</display-value>
+            </variation-attribute-value>
+            <variation-attribute-value value="Yellow">
+                <display-value xml:lang="x-default">Yellow</display-value>
+            </variation-attribute-value>
+            <variation-attribute-value value="Orange">
+                <display-value xml:lang="x-default">Orange</display-value>
+            </variation-attribute-value>
+            <variation-attribute-value value="Red">
+                <display-value xml:lang="x-default">Red</display-value>
+            </variation-attribute-value>
+            <variation-attribute-value value="Fuscia">
+                <display-value xml:lang="x-default">Fuscia</display-value>
+            </variation-attribute-value>
+        </variation-attribute-values>
+    </variation-attribute>
+
+    <variation-attribute attribute-id="memorySize" variation-attribute-id="memorySize">
+        <display-name xml:lang="x-default">Memory Size</display-name>
+        <variation-attribute-values>
+            <variation-attribute-value value="1 GB">
+                <display-value xml:lang="x-default">1 GB</display-value>
+            </variation-attribute-value>
+            <variation-attribute-value value="2 GB">
+                <display-value xml:lang="x-default">2 GB</display-value>
+            </variation-attribute-value>
+            <variation-attribute-value value="8 GB">
+                <display-value xml:lang="x-default">8 GB</display-value>
+            </variation-attribute-value>
+            <variation-attribute-value value="16 GB">
+                <display-value xml:lang="x-default">16 GB</display-value>
+            </variation-attribute-value>
+            <variation-attribute-value value="32 GB">
+                <display-value xml:lang="x-default">32 GB</display-value>
+            </variation-attribute-value>
+            <variation-attribute-value value="120 GB">
+                <display-value xml:lang="x-default">120 GB</display-value>
+            </variation-attribute-value>
+        </variation-attribute-values>
+    </variation-attribute>
+
+    <category-assignment category-id="electronics-digital-cameras" product-id="nikon-p6000">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="electronics-digital-cameras" product-id="nikon-s60">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="electronics-digital-cameras" product-id="nikon-sl16">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+</catalog>

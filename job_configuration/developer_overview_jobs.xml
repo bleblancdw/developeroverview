@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jobs xmlns="http://www.demandware.com/xml/impex/jobs/2015-07-01">
+    <job job-id="DailyImportJobs" priority="0">
+        <description>Import the catalog, price book, and inventory lists</description>
+        <parameters/>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="ImportCatalog" type="ExecutePipeline" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ExecutePipeline.Pipeline">Import-Catalog</parameter>
+                    <parameter name="FILE">import_staging/electronics_catalog.xml</parameter>
+                    <parameter name="MODE">MERGE</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="ImportPriceBook" type="ExecutePipeline" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ExecutePipeline.Pipeline">Import-PriceBook</parameter>
+                    <parameter name="MODE">MERGE</parameter>
+                    <parameter name="FILE">import_staging/electronics_catalog.xml</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="ImportInventory" type="ExecutePipeline" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ExecutePipeline.Pipeline">Import-Inventory</parameter>
+                    <parameter name="MODE">MERGE</parameter>
+                    <parameter name="FILE">import_staging/inventory.xml</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2017-08-02Z</date>
+                <time>16:50:43.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+
+    <job job-id="DeleteAll" priority="0">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="DeleteProducts" type="ExecutePipeline" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ExecutePipeline.Pipeline">Import-Catalog</parameter>
+                    <parameter name="MODE">DELETE</parameter>
+                    <parameter name="FILE">import_staging/electronics_catalog.xml</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="DeleteInventory" type="ExecutePipeline" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ExecutePipeline.Pipeline">Import-Inventory</parameter>
+                    <parameter name="FILE">import_staging/inventory.xml</parameter>
+                    <parameter name="MODE">DELETE</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="DeletePriceBooks" type="ExecutePipeline" enforce-restart="false">
+                <description>Delete price book</description>
+                <parameters>
+                    <parameter name="ExecutePipeline.Pipeline">Import-PriceBook</parameter>
+                    <parameter name="MODE">DELETE</parameter>
+                    <parameter name="FILE">import_staging/price_book.xml</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2017-08-02Z</date>
+                <time>13:33:19.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+
+    <job job-id="ExportCustomers" priority="0">
+        <description>ExportCustomers</description>
+        <parameters/>
+        <split sequential="false">
+            <flow>
+                <context site-id="Sites"/>
+                <step step-id="ExportCustomers" type="ExecuteScriptModule" enforce-restart="false">
+                    <description>ExportCustomers</description>
+                    <parameters>
+                        <parameter name="ExecuteScriptModule.Module">app_storefront_controllers/cartridge/controllers/Jobs.js</parameter>
+                        <parameter name="ExecuteScriptModule.FunctionName">ExportCustomers</parameter>
+                        <parameter name="ExecuteScriptModule.Transactional">false</parameter>
+                        <parameter name="ExecuteScriptModule.TimeoutInSeconds">3600</parameter>
+                    </parameters>
+                </step>
+                <step step-id="ExportCustomerGroups" type="ExecuteScriptModule" enforce-restart="false">
+                    <description>exports customer groups to flat file</description>
+                    <parameters>
+                        <parameter name="ExecuteScriptModule.Module">app_storefront_controllers/cartridge/controllers/Jobs.js</parameter>
+                        <parameter name="ExecuteScriptModule.FunctionName">ExportCustomerGroups</parameter>
+                        <parameter name="ExecuteScriptModule.Transactional">false</parameter>
+                        <parameter name="ExecuteScriptModule.TimeoutInSeconds">3600</parameter>
+                    </parameters>
+                </step>
+            </flow>
+            <flow>
+                <context site-id="Sites"/>
+                <step step-id="ExportNewsletterSignups" type="ExecuteScriptModule" enforce-restart="false">
+                    <description>Export newsletter signups</description>
+                    <parameters>
+                        <parameter name="ExecuteScriptModule.Module">app_storefront_controllers/cartridge/controllers/Jobs.js</parameter>
+                        <parameter name="ExecuteScriptModule.FunctionName">ExportNewsletterSignups</parameter>
+                        <parameter name="ExecuteScriptModule.Transactional">false</parameter>
+                    </parameters>
+                </step>
+            </flow>
+        </split>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="CompressFiles" type="ExecuteScriptModule" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ExecuteScriptModule.Module">app_storefront_controllers/cartridge/controllers/Jobs.js</parameter>
+                    <parameter name="ExecuteScriptModule.FunctionName">CompressFiles</parameter>
+                    <parameter name="ExecuteScriptModule.Transactional">false</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="TransferData" type="ExecuteScriptModule" enforce-restart="false">
+                <description>Transfer customer data</description>
+                <parameters>
+                    <parameter name="ExecuteScriptModule.Module">app_storefront_controllers/cartridge/controllers/Jobs.js</parameter>
+                    <parameter name="ExecuteScriptModule.FunctionName">TransferData</parameter>
+                    <parameter name="ExecuteScriptModule.Transactional">false</parameter>
+                    <parameter name="ExecuteScriptModule.TimeoutInSeconds">3600</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <rules>
+            <on-exit status="ERROR" enabled="false">
+                <send-mail>
+                    <from>bleblanc@demandware.com</from>
+                    <to>bleblanc@demandware.com</to>
+                </send-mail>
+            </on-exit>
+        </rules>
+        <triggers>
+            <run-recurring enabled="true">
+                <recurrence>
+                    <date-from>2016-12-19Z</date-from>
+                    <date-to>2017-03-31Z</date-to>
+                    <start-time>18:08:08.000Z</start-time>
+                    <interval>1d</interval>
+                    <day-of-week/>
+                </recurrence>
+            </run-recurring>
+        </triggers>
+    </job>
+
+    <job job-id="ImportCatalog" priority="0">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="ImportCatalog" type="ExecutePipeline" enforce-restart="false">
+                <description>Imports the product catalog</description>
+                <parameters>
+                    <parameter name="ExecutePipeline.Pipeline">Import-Catalog</parameter>
+                    <parameter name="FILE">import_staging/electronics_catalog.xml</parameter>
+                    <parameter name="MODE">MERGE</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2017-07-31Z</date>
+                <time>13:22:10.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+
+    <job job-id="ImportInventory" priority="0">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="ImportInventory" type="ExecutePipeline" enforce-restart="false">
+                <description>Import inventory list</description>
+                <parameters>
+                    <parameter name="ExecutePipeline.Pipeline">Import-Inventory</parameter>
+                    <parameter name="FILE">import_staging/inventory.xml</parameter>
+                    <parameter name="MODE">MERGE</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2017-08-02Z</date>
+                <time>13:30:19.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+
+    <job job-id="ImportPriceBook" priority="0">
+        <description>Import price books</description>
+        <parameters/>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="ImportPriceBook" type="ExecutePipeline" enforce-restart="false">
+                <description>Import the price book</description>
+                <parameters>
+                    <parameter name="ExecutePipeline.Pipeline">Import-PriceBook</parameter>
+                    <parameter name="MODE">MERGE</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2017-08-02Z</date>
+                <time>13:21:23.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+
+</jobs>

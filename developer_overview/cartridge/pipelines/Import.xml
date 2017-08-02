@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?demandware-pipeline version="2.0"?>
+
+<pipeline type="view">
+  <branch basename="Catalog">
+    <segment>
+      <node>
+        <start-node call-mode="private" name="Catalog" secure="false"/>
+        <node-display x="2" y="1"/>
+      </node>
+      <simple-transition>
+        <transition-display>
+          <bend-point relative-to="source" x="0" y="1"/>
+        </transition-display>
+      </simple-transition>
+      <node>
+        <pipelet-node pipelet-name="ImportCatalog" pipelet-set-identifier="bc_api">
+          <key-binding alias="CurrentJobParameterMap.FILE" key="ImportFile"/>
+          <key-binding alias="CurrentJobParameterMap.MODE" key="ImportMode"/>
+          <key-binding alias="null" key="ErrorCode"/>
+          <key-binding alias="null" key="ErrorMsg"/>
+          <key-binding alias="null" key="LogFileName"/>
+          <key-binding alias="null" key="Status"/>
+          <key-binding alias="null" key="ImportConfiguration"/>
+        </pipelet-node>
+        <node-display x="0" y="1"/>
+        <branch basename="b2" source-connector="error">
+          <transition target-connector="in">
+            <transition-display>
+              <bend-point relative-to="source" x="2" y="0"/>
+              <bend-point relative-to="target" x="0" y="-1"/>
+            </transition-display>
+          </transition>
+          <segment>
+            <node>
+              <end-node name="error"/>
+              <node-display x="1" y="1"/>
+            </node>
+          </segment>
+        </branch>
+      </node>
+      <simple-transition>
+        <transition-display>
+          <bend-point relative-to="source" x="0" y="1"/>
+        </transition-display>
+      </simple-transition>
+      <node>
+        <end-node name="ok"/>
+        <node-display x="0" y="1"/>
+      </node>
+    </segment>
+  </branch>
+  <branch basename="PriceBook">
+    <segment>
+      <node>
+        <start-node call-mode="private" name="PriceBook" secure="false"/>
+        <node-display x="4" y="1"/>
+      </node>
+      <simple-transition/>
+      <node>
+        <pipelet-node pipelet-name="ImportPriceBooks" pipelet-set-identifier="bc_api">
+          <key-binding alias="CurrentJobParameterMap.FILE" key="ImportFile"/>
+          <key-binding alias="CurrentJobParameterMap.MODE" key="ImportMode"/>
+          <key-binding alias="null" key="ErrorCode"/>
+          <key-binding alias="null" key="ErrorMsg"/>
+          <key-binding alias="null" key="LogFileName"/>
+          <key-binding alias="null" key="Status"/>
+        </pipelet-node>
+        <node-display x="0" y="1"/>
+        <branch basename="b2" source-connector="error">
+          <transition target-connector="in">
+            <transition-display>
+              <bend-point relative-to="source" x="2" y="0"/>
+              <bend-point relative-to="target" x="0" y="-1"/>
+            </transition-display>
+          </transition>
+          <segment>
+            <node>
+              <end-node name="error"/>
+              <node-display x="1" y="1"/>
+            </node>
+          </segment>
+        </branch>
+      </node>
+      <simple-transition/>
+      <node>
+        <end-node name="ok"/>
+        <node-display x="0" y="1"/>
+      </node>
+    </segment>
+  </branch>
+  <branch basename="Inventory">
+    <segment>
+      <node>
+        <start-node call-mode="private" name="Inventory" secure="false"/>
+        <node-display x="6" y="1"/>
+      </node>
+      <simple-transition/>
+      <node>
+        <pipelet-node pipelet-name="ImportInventoryLists" pipelet-set-identifier="bc_api">
+          <key-binding alias="CurrentJobParameterMap.FILE" key="ImportFile"/>
+          <key-binding alias="CurrentJobParameterMap.MODE" key="ImportMode"/>
+          <key-binding alias="null" key="ErrorCode"/>
+          <key-binding alias="null" key="ErrorMsg"/>
+          <key-binding alias="null" key="LogFileName"/>
+          <key-binding alias="null" key="Status"/>
+        </pipelet-node>
+        <node-display x="0" y="1"/>
+        <branch basename="b2" source-connector="error">
+          <transition target-connector="in">
+            <transition-display>
+              <bend-point relative-to="source" x="2" y="0"/>
+              <bend-point relative-to="target" x="0" y="-1"/>
+            </transition-display>
+          </transition>
+          <segment>
+            <node>
+              <end-node name="error"/>
+              <node-display x="1" y="1"/>
+            </node>
+          </segment>
+        </branch>
+      </node>
+      <simple-transition/>
+      <node>
+        <end-node name="ok"/>
+        <node-display x="0" y="1"/>
+      </node>
+    </segment>
+  </branch>
+</pipeline>

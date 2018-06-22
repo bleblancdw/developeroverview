@@ -38,12 +38,15 @@ server.get('ShowProduct', cache.applyDefaultCache, function(req,res,next){
 	if (req.querystring.pid === undefined)
 		{	
 			res.render('/paramnotfound');
-			/*Logger.warn('parameter not passed into function')*/
+			logger.warn('parameter not passed into function');
 			next();
 		}
 	else
 		{
-			var product = ProductMgr.getProduct(req.querystring.pid);
+			var ProductFactory = require('*/cartridge/scripts/factories/product');
+			var params = req.querystring;
+			var product = ProductFactory.get(params);
+
 			res.render('/showproduct',{product: product, decorated: false});
 			next();
 		}
@@ -54,12 +57,15 @@ server.get('ShowProductDecorated', cache.applyDefaultCache, function(req,res,nex
 	if (req.querystring.pid === undefined)
 		{	
 			res.render('/paramnotfound');
-			/*Logger.warn('parameter not passed into function')*/
+			Logger.warn('parameter not passed into function');
 			next();
 		}
 	else
 		{
-			var product = ProductMgr.getProduct(req.querystring.pid);
+			var ProductFactory = require('*/cartridge/scripts/factories/product');
+			var params = req.querystring;
+			var product = ProductFactory.get(params);
+			
 			res.render('/showproductdecorated',{product: product, decorated: true});
 			next();
 		}
@@ -67,13 +73,13 @@ server.get('ShowProductDecorated', cache.applyDefaultCache, function(req,res,nex
 
 server.get('LinksBasic', cache.applyDefaultCache, function (req, res, next) {
 	
-	var urlAction1 = new URLAction('Demo-Links', 'MobileFirstSG', 'en_US');
+	var urlAction1 = new URLAction('Demo-Links', 'MobileFirst', 'en_US');
 	var url1 = URLUtils.abs(false, urlAction1);
 
-	var urlAction2 = new URLAction('Demo-Links', 'MobileFirstSGGlobal', 'fr_FR');
+	var urlAction2 = new URLAction('Demo-Links', 'MobileFirstGlobal', 'fr_FR');
 	var url2 = URLUtils.abs(false, urlAction2);
 	
-	var urlAction3 = new URLAction('Demo-Links', 'MobileFirstSGGlobal', 'en_GB');
+	var urlAction3 = new URLAction('Demo-Links', 'MobileFirstGlobal', 'en_GB');
 	var url3 = URLUtils.abs(false, urlAction3);
 	
 	res.render('/linksBasic',{url1 : url1, url2: url2, url3: url3});
@@ -83,13 +89,13 @@ server.get('LinksBasic', cache.applyDefaultCache, function (req, res, next) {
 
 server.get('Links', cache.applyDefaultCache, function (req, res, next) {
 	
-	var urlAction1 = new URLAction('Demo-Links', 'MobileFirstSG', 'en_US');
+	var urlAction1 = new URLAction('Demo-Links', 'MobileFirst', 'en_US');
 	var url1 = URLUtils.abs(false, urlAction1);
 
-	var urlAction2 = new URLAction('Demo-Links', 'MobileFirstSGGlobal', 'fr_FR');
+	var urlAction2 = new URLAction('Demo-Links', 'MobileFirstGlobal', 'fr_FR');
 	var url2 = URLUtils.abs(false, urlAction2);
 	
-	var urlAction3 = new URLAction('Demo-Links', 'MobileFirstSGGlobal', 'en_GB');
+	var urlAction3 = new URLAction('Demo-Links', 'MobileFirstGlobal', 'en_GB');
 	var url3 = URLUtils.abs(false, urlAction3);
 	
 	res.render('/links',{url1 : url1, url2: url2, url3: url3});

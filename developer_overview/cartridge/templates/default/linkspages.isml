@@ -3,5 +3,5 @@
 2.  <a href="${URLUtils.url('Demo-HelloWorld')}">Hello World</a><br><br>
 3.  <a href="${URLUtils.url('Demo-ShowParam')}">HTTP Parameter (none)</a><br><br>
 4.  <a href="${URLUtils.url('Demo-ShowParam')}?foo=bar">HTTP Parameter (foo)</a><br><br>
-5.  <a href="${URLUtils.url('Demo-ShowProduct')}?pid=123456">Product (123456)</a><br><br>
-6.  <a href="${URLUtils.url('Demo-ShowProductDecorated')}?pid=123456">Product  - decorated (123456)</a><br><br>
+5.  <a href="${URLUtils.url('Demo-ShowProduct')}?pid=62516752M">Product (62516752M)</a><br><br>
+6.  <a href="${URLUtils.url('Demo-ShowProductDecorated')}?pid=62516752M">Product  - decorated (62516752M)</a><br><br>

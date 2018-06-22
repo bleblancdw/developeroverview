@@ -1,3 +1,9 @@
-<isprint value="${pdict.product.name}"/><br>
+<img class="tile-image"
+             src="${pdict.product.images.large[0].url}"
+             alt="${pdict.product.productName}"
+             title="${pdict.product.images.large[0].title}"
+             itemprop="image"/>
+<br>
+<isprint value="${pdict.product.productName}"/><br>
 <isprint value="${pdict.product.shortDescription}"/><br>
-<isprint value="${pdict.product.priceModel.price}"/>
+<isprint value="${pdict.product.price.sales.decimalPrice}"/>

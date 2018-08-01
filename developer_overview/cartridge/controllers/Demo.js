@@ -73,13 +73,13 @@ server.get('ShowProductDecorated', cache.applyDefaultCache, function(req,res,nex
 
 server.get('LinksBasic', cache.applyDefaultCache, function (req, res, next) {
 	
-	var urlAction1 = new URLAction('Demo-Links', 'MobileFirst', 'en_US');
+	var urlAction1 = new URLAction('Demo-Links', 'RefArch', 'en_US');
 	var url1 = URLUtils.abs(false, urlAction1);
 
-	var urlAction2 = new URLAction('Demo-Links', 'MobileFirstGlobal', 'fr_FR');
+	var urlAction2 = new URLAction('Demo-Links', 'RefArchGlobal', 'fr_FR');
 	var url2 = URLUtils.abs(false, urlAction2);
 	
-	var urlAction3 = new URLAction('Demo-Links', 'MobileFirstGlobal', 'en_GB');
+	var urlAction3 = new URLAction('Demo-Links', 'RefArchGlobal', 'en_GB');
 	var url3 = URLUtils.abs(false, urlAction3);
 	
 	res.render('/linksBasic',{url1 : url1, url2: url2, url3: url3});
@@ -89,13 +89,13 @@ server.get('LinksBasic', cache.applyDefaultCache, function (req, res, next) {
 
 server.get('Links', cache.applyDefaultCache, function (req, res, next) {
 	
-	var urlAction1 = new URLAction('Demo-Links', 'MobileFirst', 'en_US');
+	var urlAction1 = new URLAction('Demo-Links', 'RefArch', 'en_US');
 	var url1 = URLUtils.abs(false, urlAction1);
 
-	var urlAction2 = new URLAction('Demo-Links', 'MobileFirstGlobal', 'fr_FR');
+	var urlAction2 = new URLAction('Demo-Links', 'RefArchGlobal', 'fr_FR');
 	var url2 = URLUtils.abs(false, urlAction2);
 	
-	var urlAction3 = new URLAction('Demo-Links', 'MobileFirstGlobal', 'en_GB');
+	var urlAction3 = new URLAction('Demo-Links', 'RefArchGlobal', 'en_GB');
 	var url3 = URLUtils.abs(false, urlAction3);
 	
 	res.render('/links',{url1 : url1, url2: url2, url3: url3});
